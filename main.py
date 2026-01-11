@@ -17,9 +17,9 @@ def main():
         contents="Why is Boot.dev such a great place to learn backend development? Use one paragraph maximum."
     )
 
-    # Verify usage metadata exists
+
     if response.usage_metadata is None:
-        raise RuntimeError("No usage metadata returned — API request may have failed")
+        raise RuntimeError("No usage metadata returned - API request may have failed")
 
     print(f"Prompt tokens: {response.usage_metadata.prompt_token_count}")
     print(f"Response tokens: {response.usage_metadata.candidates_token_count}")
